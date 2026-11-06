@@ -1,0 +1,139 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background: #101827;
+    color: white;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 25px 10%;
+    background: #172438;
+}
+
+.logo {
+    font-size: 25px;
+    color: #38bdf8;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    margin-left: 20px;
+    transition: color 0.3s;
+}
+
+nav a:hover {
+    color: #38bdf8;
+}
+
+.hero {
+    text-align: center;
+    padding: 100px 20px;
+    animation: aparecer 1.5s ease;
+}
+
+.hero h1 {
+    font-size: 45px;
+    margin-bottom: 20px;
+}
+
+.hero p {
+    color: #b8c5d6;
+    font-size: 18px;
+}
+
+.produto {
+    font-size: 100px;
+    margin: 30px;
+    animation: flutuar 3s infinite ease-in-out;
+}
+
+.botao {
+    display: inline-block;
+    padding: 15px 35px;
+    background: #0284c7;
+    color: white;
+    border-radius: 30px;
+    text-decoration: none;
+    margin-top: 25px;
+    transition: all 0.4s ease;
+}
+
+.botao:hover {
+    background: #38bdf8;
+    transform: scale(1.1);
+}
+
+.beneficios {
+    display: flex;
+    justify-content: center;
+    gap: 25px;
+    padding: 50px 10%;
+    flex-wrap: wrap;
+}
+
+.card {
+    background: #1e293b;
+    padding: 30px;
+    border-radius: 15px;
+    text-align: center;
+    width: 220px;
+    transition: transform 0.4s, background 0.4s;
+    animation: subir 1.5s ease;
+}
+
+.card:hover {
+    transform: translateY(-12px);
+    background: #334155;
+}
+
+.card h2 {
+    color: #38bdf8;
+    margin-bottom: 15px;
+}
+
+@keyframes aparecer {
+    from {
+        opacity: 0;
+        transform: translateY(40px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes flutuar {
+    0%, 100% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-20px);
+    }
+}
+
+@keyframes subir {
+    from {
+        opacity: 0;
+        transform: translateY(50px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+footer {
+    text-align: center;
+    padding: 25px;
+    background: #172438;
+    color: #94a3b8;
+}

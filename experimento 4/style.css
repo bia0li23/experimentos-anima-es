@@ -1,0 +1,52 @@
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background: #eeeeee;
+}
+
+.semaforo {
+    background: #222;
+    padding: 20px;
+    border-radius: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.luz {
+    width: 70px;
+    height: 70px;
+    border-radius: 50%;
+    opacity: 0.2;
+}
+
+.vermelho {
+    background: red;
+    animation: acender 9s infinite;
+}
+
+.amarelo {
+    background: yellow;
+    animation: acender 9s infinite;
+    animation-delay: 3s;
+}
+
+.verde {
+    background: lime;
+    animation: acender 9s infinite;
+    animation-delay: 6s;
+}
+
+@keyframes acender {
+    0%, 30% {
+        opacity: 1;
+        box-shadow: 0 0 25px currentColor;
+    }
+
+    33%, 100% {
+        opacity: 0.2;
+        box-shadow: none;
+    }
+}
